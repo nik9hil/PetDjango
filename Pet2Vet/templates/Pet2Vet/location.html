@@ -1,0 +1,85 @@
+<head>
+        <title>Location</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+       {% extends 'Pet2Vet/base.html' %}
+       {% block body %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+    <style >
+      #mapid{
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+      }
+    </style>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+    <a href="#" id="getloc">GET LOCATION</a>
+    <div id="map">
+      <iframe id="google_map" src="https://maps.google.co.in/?output=embed" width="600" height="450" frameborder="0"  ></iframe>
+    </div>
+    
+    <script type="text/javascript">
+    var c=function(pos){
+      var lat=pos.coords.latitude,
+      var    long=pos.cords.longitude,
+      coords=lat+','+long;
+      document.getElementById('google_map').setAttribute('src','https://maps.google.co.in/?q='coords',0&z-60&output=embed');
+    }
+    
+      document.getElementById('getloc').onclick=function(){
+        navigator.geolocation.getCurrentPosition(c)
+        return false;
+      }
+    </script>
+    
+    
+    
+    
+        <div id="mapid"></div>
+    
+        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
+    
+    <script type="text/javascript">
+      var mymap = L.map('mapid').setView([19.0760, 72.8777], 13);
+    
+    
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+    
+    
+    L.marker([19.08612, 72.888544]).addTo(mymap)
+        .bindPopup('Dr Sudershan Pet Clinic')
+        .openPopup();
+        L.marker([19.0812, 72.88544]).addTo(mymap)
+            .bindPopup('Sai Veterinaryclinic')
+            .openPopup();
+    
+            L.marker([19.08512, 72.868544]).addTo(mymap)
+                .bindPopup('Paws n Claws Pet Clini')
+                L.marker([19.0862, 72.844]).addTo(mymap)
+                    .bindPopup('Dr Sudershan Pet Clinic')
+    
+    
+    </script>
+    
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>   
+    {% endblock %} 

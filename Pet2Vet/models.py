@@ -1,5 +1,6 @@
 #Import Dependencies
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Volunteer(models.Model):
@@ -7,6 +8,9 @@ class Volunteer(models.Model):
     email = models.EmailField(max_length=150,blank=True)
     phonenumber = models.CharField(max_length=10,blank=True)
     city = models.CharField(max_length=50,blank=True)
+
+    def get_absolute_url(self):
+        return reverse('Pet2Vet:index',kwargs={'pk':self.pk})
 
     def __str__(self):
         return self.yourname

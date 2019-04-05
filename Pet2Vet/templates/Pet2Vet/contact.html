@@ -1,0 +1,64 @@
+<head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <style type="text/css">
+            #heading {
+                    font-family: 'Fredericka the Great', cursive;
+                    font-size: 80;
+                    color:white;
+                }
+            h2 {
+                    font-family: 'Fredericka the Great', cursive;
+                    color:white;
+                }
+            p{
+                color:white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+            }
+            .image {
+                margin-top: 50px;
+    
+            }
+            body{
+                margin-top:70px;
+                background-image: url(https://i.pinimg.com/originals/54/5c/7c/545c7ca5f72fa1115249121f2ddf4cee.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+    
+            }
+        </style>
+    </head>
+    <body>
+        {% extends 'Pet2Vet/base.html' %}
+        {% block body %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 id="heading">Contact Us</h1>
+                    <h2>Pet2Vet</h2>
+                    <br>
+                    <p>
+                        KJSCE, Vidyavihar (E)
+                        <br>
+                        Mumbai-400 076
+                        <br>
+                        Maharashtra
+                        <br>
+                        ddc@somaiya.edu
+                        <br>
+                        <br>
+                        Tel: +91 - 7738586795
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>   
+    {% endblock %} 

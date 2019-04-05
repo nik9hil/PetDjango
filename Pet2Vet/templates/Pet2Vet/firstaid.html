@@ -1,0 +1,118 @@
+<head>
+        <title>PetCare</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <style type="text/css">
+            body{
+                margin-top:70px;
+                background-image: url(https://i.pinimg.com/originals/54/5c/7c/545c7ca5f72fa1115249121f2ddf4cee.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            #heading {
+                    font-family: 'Fredericka the Great', cursive;
+                    font-size: 100px;
+                    color:white;
+                }
+            h2 {
+                    font-family: 'Fredericka the Great', cursive;
+                    color:white;
+                }
+            p {
+                    color:white;
+                    font-family: 'Montserrat', sans-serif;
+                }
+        </style>
+    </head>
+    <body>
+ 
+        {% extends 'Pet2Vet/base.html' %}
+        {% block body %}
+
+        <div class="container">
+            <h1 id="heading">Instant Help</h1>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>First Aid kit</h2>
+                        <p>Basic first aid kit for your pets</p>
+                    </div>
+                    <div class="col-sm-6">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3oqzOaIplOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </div>
+                </div>
+    
+    
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6" color= white>
+                        <p>
+                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JKa7mr6XYS8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </p>
+                    </div>
+                    <div class="col-sm-6" >
+              <font color="white">
+                  <h2>Injured Pet</h2>
+                  <p>What to do if your pet is injured?</p><br>
+                  <br>
+              </font>
+                    </div>
+                </div>
+                <hr>
+            <div class="row">
+                    <div class="col-sm-6">
+                        <h2>CPR</h2>
+                        <p>Learn to perform a CPR</p>
+                    </div>
+                    <div class="col-sm-6">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KqClwoUrgZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+    
+    
+        </div>
+                        <hr>
+                <div class="row">
+                    <div class="col-sm-6" color= white>
+                        <p>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6" color= white>
+                        <p>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WH2-X_0-feI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					</p>
+                    </div>
+                </div>
+                <hr>					</p>
+                    </div>
+                    <div class="col-sm-6" >
+              <font color="white">
+                  <h2>Emergency</h2>
+                  <p>Emergency PetCare and FirstAid</p><br>
+                  <br>
+              </font>
+                    </div>
+                </div>
+                <hr>
+    
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Pets and Disasters</h2>
+                        <p>How to save your pets in disasters</p>
+                    </div>
+                    <div class="col-sm-6">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7UBSLeK0ZCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+                    </div>
+            <p></p><p></p>
+            <font color="white">
+                  <h2>To know more, click the button below :-</h2>
+                  <br>
+              </font>
+            <p></p><p></p>
+            <a href="https://www.avma.org/public/Pages/default.aspx" <button type="button" class="btn btn-primary btn-lg btn-block">PetCare - Click Me</button></a>
+            <p></p><p></p>
+        </div>
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+    {% endblock %}
