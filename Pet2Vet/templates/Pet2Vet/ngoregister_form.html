@@ -1,0 +1,95 @@
+<head>
+        <title>Register as an NGO</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <style type="text/css">
+    
+            #heading{
+                    font-family: 'Fredericka the Great', cursive;
+                    font-size: 75px;
+                    color:white;
+                    text-align:center;
+                    margin-bottom: 50px;
+                }
+            body{
+                margin-top:70px;
+                background-image: url(https://i.pinimg.com/originals/54/5c/7c/545c7ca5f72fa1115249121f2ddf4cee.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            #OPA{
+                opacity: 0.9;
+                color :white;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .blank{
+                width:800px;
+            }
+            #ending{
+                text-align:center;
+                color:white;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <body>
+        {% extends 'Pet2Vet/base.html' %}
+        {% block body %}
+    
+      </form>
+        <h1 id="heading">MAKE SOMEONE's LIFE BETTER</h1>
+        <h2 id = "ending"style="color:white"style="text-align:center">Once you submit the form, we shall contact you soon.</h2><br><br>
+     
+        
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% include 'Pet2Vet/form-template.html' %}
+        <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10"style="padding-left:500px">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+        </div>
+    </form>
+        <!--<div class="container">
+            <form id="OPA" class="form-horizontal" method="post">
+              <div class="form-group">
+                <label for="Name" class=" col-sm-3 col-sm-offset-1 control-label">Name :</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" for="Name" name="Name" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class=" col-sm-3 col-sm-offset-1 control-label">Email :</label>
+                <div class="col-sm-5">
+                  <input type="email" class="form-control" name="Email" id="inputEmail3" placeholder="Email">
+                </div>
+              </div>
+               <div class="form-group">
+                <label for="telephone" class=" col-sm-3 col-sm-offset-1 control-label">Phone no. :</label>
+                <div class="col-sm-5">
+                  <input type="tel" class="form-control" name="Phone" id="telephone" placeholder="Phone">
+                </div>
+              </div>
+               <div class="form-group">
+                <label for="addr" class=" col-sm-3 col-sm-offset-1 control-label">City :</label>
+                <div class="col-sm-5">
+                    <textarea name="Addr" class="form-control" id="addr" rows="4" placeholder="City"></textarea>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <div class="col-sm-1 col-sm-offset-8">
+                  <button type="button" class="btn btn-default">Let Us Contact You!</button>
+                </div>
+              </div>
+            </form>-->
+            <br><br>
+        </div>
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+    {% endblock %}    

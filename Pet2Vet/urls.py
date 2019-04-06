@@ -33,7 +33,16 @@ urlpatterns = [
     #DonateForm
     url(r'donate/entry/$',views.DonateEntry.as_view(),name='donate-entry'),
 
-    # RegistrationForm
-    #url(r'register/$', views.register, name='register'),
+    #VolunteerRegistration
+    url(r'volunteer/entry/$',views.VolunteerEntry.as_view(),name='volunteer-entry'),
+
+    #VetRegistration
+    url(r'vet/entry/$',views.VetEntry.as_view(),name='vet-entry'),
+
+    #NGORegistration
+    url(r'ngo/entry/$',views.NGOEntry.as_view(),name='ngo-entry'),
+
+    #AdoptPets
+    url(r'adopt/entry/$',views.ADOPTEntry.as_view(),name='adopt-entry'),
 
 ]
