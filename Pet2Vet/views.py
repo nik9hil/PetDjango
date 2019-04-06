@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
-from .models import Volunteer,NGO,FirstAid,Doctors,Pets
+from .models import VolunteerRegister,NGO,FirstAid,Doctors,Pets,DonateForm
 from django.template import loader
 
 #Create your views here
@@ -53,9 +53,13 @@ def location(request):
 
 def contact(request):
     context = {}
-    return render(request, 'Pet2Vet/contact.html', context)    
+    return render(request, 'Pet2Vet/contact.html', context) 
 
-class VolunteerCreate(CreateView):
+class DonateEntry(CreateView):   
+    model = DonateForm
+    fields = ['name', 'city', 'phonenumber', 'email']
+
+"""class VolunteerCreate(CreateView):
     template_name='Pet2Vet/home.html'
-    model = Volunteer
-    fields = ['yourname', 'email', 'phonenumber', 'city']
+    model = VolunteerRegister
+    fields = ['yourname', 'email', 'phonenumber', 'city']"""

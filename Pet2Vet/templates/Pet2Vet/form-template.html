@@ -1,0 +1,13 @@
+{% for field in form %}
+    <div class="form-group "style="padding-left:600px">
+        <label class="col-sm-2"style="color:white">{{ field.label_tag }}</label>
+        <div class="col-form-label col-2 pt-0"id="field"style=>{{ field }}</div><p><br></p>
+    </div>
+{% endfor %}
+<!--		<form id="OPA" class="form-horizontal" method="post">
+		  <div class="form-group">
+		    <label for="Name" class=" col-sm-3 col-sm-offset-1 control-label">Name :</label>
+		    <div class="col-sm-5">
+		      <input type="text" class="form-control" for="Name" name="Name" placeholder="Name">
+		    </div>
+		  </div>-->

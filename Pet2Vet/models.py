@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 
 # Create your models here.
-class Volunteer(models.Model):
+class VolunteerRegister(models.Model):
     yourname = models.CharField(max_length=100,blank=True)
     email = models.EmailField(max_length=150,blank=True)
     phonenumber = models.CharField(max_length=10,blank=True)
@@ -16,7 +16,7 @@ class Volunteer(models.Model):
         return self.yourname
 
 
-class Vet(models.Model):
+class VetRegister(models.Model):
     name = models.CharField(max_length=100,blank=False)
     city = models.CharField(max_length=50,blank=False)
     email = models.EmailField(max_length=100,blank=False)
@@ -30,11 +30,15 @@ class DonateForm(models.Model):
     name = models.CharField(max_length=100,blank=False)
     city = models.CharField(max_length=100,blank=False)
     phonenumber = models.CharField(max_length=10,blank=False)
+    email = models.EmailField(max_length=50,blank=False)
 
     def __str__(self):
         return self.name
 
-class FirstAid(models.Model):
+    def get_absolute_url(self):
+        return reverse('home')
+
+class FirstAid(models.Model):   #Used
     title = models.CharField(max_length=100,blank=False)
     video = models.CharField(max_length=100,blank=False)
     description = models.CharField(max_length = 1000, blank=False)
@@ -52,7 +56,7 @@ class AdoptForm(models.Model):
     def __str__(self):
         return self.name
 
-class NGO(models.Model):
+class NGO(models.Model):    #Used
     name = models.CharField(max_length=100,blank=False)
     phonenumber = models.CharField(max_length=10,blank=False)
     city = models.CharField(max_length=100,blank=False)
@@ -61,7 +65,7 @@ class NGO(models.Model):
     def __str__(self):
         return self.name
 
-class Doctors(models.Model):
+class Doctors(models.Model):    #Used
     name = models.CharField(max_length=100,blank=False)
     location = models.CharField(max_length=100,blank=False)
     contact = models.CharField(max_length=10,blank=False)
@@ -70,7 +74,7 @@ class Doctors(models.Model):
     def __str__(self):
         return self.name
 
-class Pets(models.Model):
+class Pets(models.Model):   #Used
     name = models.CharField(max_length=100,blank=False)
     city = models.CharField(max_length=100,blank=False)
     contact = models.CharField(max_length=10,blank=False)

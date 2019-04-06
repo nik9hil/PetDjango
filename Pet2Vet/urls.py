@@ -30,4 +30,10 @@ urlpatterns = [
     # /Pet2Vet/contact/
     url(r'contact/$', views.contact, name='contact'),
 
+    #DonateForm
+    url(r'donate/entry/$',views.DonateEntry.as_view(),name='donate-entry'),
+
+    # RegistrationForm
+    #url(r'register/$', views.register, name='register'),
+
 ]
