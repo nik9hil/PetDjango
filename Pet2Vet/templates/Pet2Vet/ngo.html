@@ -33,63 +33,22 @@
 
 <div class="container">
 		<h1 id="heading">NGOs</h1>
+		{% for ngo in all_ngo %}
 			<div class="row">
 				<div class="col-sm-6">
-					<h2>F.I.A.P.O</h2>
+					<h2>{{ ngo.name }}</h2>
 					<p>
-						<strong>Location: </strong>E-18A, Block E, East of Kailash, New Delhi, Delhi 110048<br>
-            <strong>Contact: </strong>011 4107 2945<br>
+						<strong>Location: </strong>{{ ngo.city }}<br>
+            <strong>Contact: </strong>{{ ngo.phonenumber }}<br>
 
-            <div class="button">
-                <a href="http://fiapo.org/volunteer/ class="btn btn-one">Register Here</a>
-                <a href="http://fiapo.org/donate/" class="btn btn-two"> Donate Here</a>
-            </div>
  					</p>
 				</div>
 				<div class="col-sm-6">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.416704046125!2d77.2393478148989!3d28.55724719423553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b55bef77f5%3A0x7796fff8850d3261!2sFIAPO+(Federation+of+Indian+Animal+Protection+Organisations)!5e0!3m2!1sen!2sin!4v1552737077208" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="{{ ngo.map }}" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 			</div>
 			<hr>
-			<div class="row">
-				<div class="col-sm-6" color= white>
-
-					<p>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.046956806766!2d72.83211451474358!3d19.061672957376466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91670cf6daf%3A0xdff17ab8bea48aaa!2sPaws+N+Furs!5e0!3m2!1sen!2sin!4v1552734225935" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-					</p>
-				</div>
-				<div class="col-sm-6" >
-          <font color="white">
-          <h2>People For Animal</h2>
-          <strong>Location: </strong>487 Cama Village, Andheri West, Mumbai, Maharashtra 400050<br>
-          <strong>Contact: </strong>094678 85738<br>
-          <div class="button">
-              <a href="https://peopleforanimalsindia.us20.list-manage.com/subscribe?u=5ca496d3567662bd326765768&id=6b07479e34" class="btn btn-one">Register Here</a>
-              <a href="https://www.peopleforanimalsindia.org/donate.php" class="btn btn-two"> Donate Here</a>
-          </div>
-
-          </font>
-				</div>
-			</div>
-			<hr>
-        <div class="row">
-				<div class="col-sm-6">
-					<h2>Help Animals India</h2>
-					<p>
-						<strong>Location: </strong>Sandesh Nagar, Bail Bazar, Mumbai, Maharashtra 400099<br>
-            <strong>Contact: </strong>093246 24543<br>
-
-            <div class="button">
-                <a href="https://helpanimalsindia.org/signup" class="btn btn-one">Register Here</a>
-                <a href="https://helpanimalsindia.org/donate" class="btn btn-two"> Donate Here</a>
-            </div>
- 					</p>
-				</div>
-				<div class="col-sm-6">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.461408038562!2d72.87893111474395!3d19.087403756574368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c86189ff5f1f%3A0xaf32091295377712!2sSai+Vet+Clinic%2C+Dr.+Chinmay+On+Call+Vet!5e0!3m2!1sen!2sin!4v1552734540191" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
+			{% endfor %}
 		</div>
 
 

@@ -34,57 +34,30 @@
 
         <div class="container">
             <h1 id="heading">ADOPT</h1>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2>ELL</h2>
-                        <p>
-                            <strong>Location: </strong>E East of Kailash, New Delhi, Delhi 110048<br>
-                <strong>Contact: </strong>9821244075<br>
-                <strong>Gender: </strong>Male<br>
-    
-    
-                         </p>
-                    </div>
-                    <div class="col-sm-6">
-    <img src="https://ik.imagekit.io/2345/tr:h-140,w-187,c-at_max/puppies/images/EM.jpg" alt="">  </div>
-                </div>
-                <hr>
+            {% for pet in all_pets %}
+
                 <div class="row">
                     <div class="col-sm-6" color= white>
     
                         <p>
     
-    <img src="https://www.dogspot.in/puppies/images/330x400_15823307_10155094708067313_1024667175191859767_n.jpg" alt="">
+    <img src="{{ pet.location }}" alt="">
                         </p>
                     </div>
                     <div class="col-sm-6" >
               <font color="white">
-              <h2>Tabzoo</h2>
-              <strong>Location: </strong>15-A/21, Takshila, Mahakali Caves Road, Andheri East , Mumbai<br>
-              <strong>Contact: </strong>094678 85738<br>
-              <strong>Gender: </strong>male<br>
+              <h2>{{ pet.name }}</h2>
+              <strong>Location: </strong>{{ pet.city }}<br>
+              <strong>Contact: </strong>{{ pet.contact }}<br>
+              <strong>Gender: </strong>{{ pet.gender }}<br>
     
     
               </font>
                     </div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2>Eml</h2>
-                        <p>
-                <strong>Location: </strong>
-    Sandesh Nagar, Bail Bazar, Mumbai, Maharashtra 400099<br>
-                <strong>Contact: </strong>093246 24543<br>
-                <strong>Gender: </strong>male<br>
-    
-                        </p>
-                        <br>
-                    </div>
-                    <div class="col-sm-6">
-    <img src="https://ik.imagekit.io/2345/tr:h-140,w-187,c-at_max/puppies/images/IMG_20151104_004017.jpg" alt="">			</div>
-    
-    
+                {% endfor %}
+                
         </div>
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

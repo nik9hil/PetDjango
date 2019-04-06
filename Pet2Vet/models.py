@@ -37,6 +37,7 @@ class DonateForm(models.Model):
 class FirstAid(models.Model):
     title = models.CharField(max_length=100,blank=False)
     video = models.CharField(max_length=100,blank=False)
+    description = models.CharField(max_length = 1000, blank=False)
     
     def __str__(self):
         return self.title
@@ -55,6 +56,26 @@ class NGO(models.Model):
     name = models.CharField(max_length=100,blank=False)
     phonenumber = models.CharField(max_length=10,blank=False)
     city = models.CharField(max_length=100,blank=False)
+    map = models.CharField(max_length=1000,blank=False)
+
+    def __str__(self):
+        return self.name
+
+class Doctors(models.Model):
+    name = models.CharField(max_length=100,blank=False)
+    location = models.CharField(max_length=100,blank=False)
+    contact = models.CharField(max_length=10,blank=False)
+    map = models.CharField(max_length=1000,blank=False)
+
+    def __str__(self):
+        return self.name
+
+class Pets(models.Model):
+    name = models.CharField(max_length=100,blank=False)
+    city = models.CharField(max_length=100,blank=False)
+    contact = models.CharField(max_length=10,blank=False)
+    gender = models.CharField(max_length=10,blank=False)
+    location = models.CharField(max_length=1000,blank=False)
 
     def __str__(self):
         return self.name
