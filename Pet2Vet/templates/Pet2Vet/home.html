@@ -47,6 +47,17 @@
 			font-size: 23px;
 			text-decoration: none;
 		}
+
+		.blinking{
+    		animation:blinkingText 1.2s infinite;
+		}
+		@keyframes blinkingText{
+    		0%{     color: rgb(241, 10, 10);    }
+    		49%{    color: rgb(172, 241, 10);; }
+    		50%{    color: rgb(82, 9, 177);; }
+    		99%{    color: rgb(10, 195, 241);;  }
+    		100%{   color: #000;    }
+		}
 	</style>
 </head>
 <body>
@@ -58,9 +69,12 @@
 	<div class="container">
 		<div class="row mid">
 			<h1 id="heading">CARE THEY NEED, LOVE THEY DESERVE</h1>
-			<h3>We were made to live with the animals!</h3>
-			<h3>ADOPT. JOIN AN NGO. CONSULT AN ANIMAL DOCTOR.</h3>
-			<h3>We can't help everyone, but everyone can help someone.</h3>
+			<h3 class="blinking">We were made to live with the animals!</h3>
+			<marquee width="100" style="color:orange" behavior="alternate">ADOPT</marquee>
+			<marquee width="140" style="color:white" behavior="alternate">JOIN AN NGO</marquee>
+			<marquee width="270" style="color:green" behavior="alternate">CONSULT AN ANIMAL DOCTOR</marquee>
+			<br>
+			<h3>We can't help everyone, but everyone can help someone</h3> 
 		</div>
 	</div>
 
